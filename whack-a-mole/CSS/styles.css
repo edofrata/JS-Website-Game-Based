@@ -1,0 +1,790 @@
+/* Body paraemters */
+body {
+  background-color: rgba(7, 66, 184, 0.8);
+}
+/* Text For the LOGO parameters  */
+.text_background {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  background-color: rgba(22, 129, 179, 0.9);
+  z-index: 1;
+  border-radius: 25px;
+  
+}
+
+
+.sign_out {
+  position: absolute; 
+  left: 87%;
+  top:17px;
+  z-index: 5;
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:14px;
+	border:2px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Press Start 2P', cursive;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.sign_out:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+
+
+        
+/* Text for the logo */
+
+.text {
+  color: rgb(0, 0, 0);
+  position: relative;
+  bottom: 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* logo parameters div parameters */
+
+.logo_style {
+  
+  position: relative;
+  width: 70px;
+  top: 5px;
+
+}
+
+/* Nav Bar parameters */
+.navigation {
+  position: relative;
+  text-align: center;
+  background-color: rgba(43, 156, 209, 0.9);
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+}
+/* Text colour nav bar parameters */
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+}
+/* Selected page nav bar parameters */
+.selected {
+  background-color: rgb(25, 40, 180, 0.8);
+  padding: 15px;
+  border-radius: 15px;
+}
+h1 {
+    text-align: center;
+}
+
+/* Canvas parameters */
+
+#game_canvas{
+
+  position: absolute;
+  width: 45%;
+  height:55%;
+  top:120px;
+  left:45%;
+  border: 10px solid rgb(135,206,235);
+  padding: 50px;
+  background-color:rgba(24, 192, 80, 0.3);
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: url('../Images/hammer.png'),auto;
+  
+
+}
+#session_user{
+
+  font-size:25px;
+  line-height:35px;
+}
+
+/* ---------------------------GAME PARAMETERS------------------------------------ */
+
+.hole{
+
+
+  flex: 1 30 25%;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  left:3%;
+  top:5%;
+  
+  
+
+}
+
+
+.hole:after {
+  display: inherit;
+  background: url("../Images/grass.png") bottom  center  no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70%;
+  position: relative;
+  z-index: 3;
+  bottom: -133px;
+  left: 30px;
+  
+  
+}
+
+.score {
+  background-color: rgba(255,255,255,0.2);
+  height:30px;
+  border-radius: 15px;
+  position: relative;
+  left: 35%;
+  bottom: 5%;
+  font-family: 'Press Start 2P', cursive;
+  font-size:30px;
+  
+}
+
+.mole {
+  background: url("../Images/mole.png") center center no-repeat;
+  background-size: 55%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  left:30px;
+  transition:all 0.4s;
+}
+
+
+.hole.up .mole {
+  top: 35px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.hole_1, .hole_2, .hole_3,
+.hole_4, .hole_5,.hole_6{
+
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+
+.hole_2{
+
+  margin-left:30%;
+}
+
+.hole_3{
+  margin-left: 60%;
+}
+
+.hole_4{
+  margin-top: 30%;
+}
+
+.hole_5{
+
+  margin-top: 30%;
+  margin-left: 30%;
+}
+.hole_6{
+
+  margin-top: 30%;
+  margin-left: 60%;
+}
+
+.game_button {
+
+  position: absolute;
+  bottom: 13%;
+  left:66.5%;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:7px;
+	border:3px solid #4b8f29;
+	display:inline-block;
+	cursor: pointer;
+	color:#ffffff;
+	font-family: 'Press Start 2P', cursive;
+	font-size:25px;
+	font-weight:bold;
+	padding:6px 19px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #5b8a3c;
+  
+}
+.game_button:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+.game_button:active {
+	position: absolute;;
+
+}
+
+#game_over{
+
+  position: relative;
+  color:red;
+  font-size:35px;
+  right:1px;
+  font-family: 'Press Start 2P', cursive;
+  
+
+}
+/* ----------------------END GAME PARAMETERS----------------------------------- */
+
+/* --------------USER SCORE TABLE--------------------- */
+
+.user_score{
+
+  position: absolute;
+  width: 25%;
+  height:55%;
+  border: 10px solid rgb(135,206,235);
+  padding: 50px;
+  left: 5%;
+  top: 120px;
+  background-color:rgb(135,206,235, 0.3);
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 25px;
+}
+.user_score h1{
+
+  position: relative;
+  bottom: 8%;
+
+}
+
+.user_score table {
+  position: relative;
+  margin: 25px auto;
+  border-collapse: collapse;
+  cursor: pointer;
+  bottom: 5%;
+  background: #fff;
+  border-radius:25px;
+
+  
+}
+.user_score table tr:hover {
+  background: #f4f4f4;
+}
+.user_score table tr:hover td {
+  color: rgb(135, 217, 231);
+  border-radius:15px;
+}
+.user_score table th,
+table td {
+  color: rgb(0, 0, 0);
+  padding: 12px 0px 10px 20px;
+  border-collapse: collapse;
+  font-size:15px;
+}
+.user_score table th {
+  background: #0ab5e9;
+  color: #fff;
+  font-size: 18px;
+
+}
+.user_score table th.last {
+  border-right: none;
+}
+
+
+/* ---------_END USER SCORE TABLE-------------- */
+
+/* Tutorial Box Parameters */
+
+.Tutorial_box{
+
+  position: absolute;
+  margin-left: 9%;
+  width: 25%;
+  height:60%;
+  border: 10px solid rgb(135,206,235);
+  padding: 50px;
+  left: 25%;
+  top: 130px;
+  background-color:rgb(135,206,235, 0.3);
+  border-radius: 25px;
+  font-family: 'Press Start 2P', cursive;
+
+
+}
+
+.Tutorial_box h1{
+
+  text-align: center;
+  margin-top: -25px;
+
+}
+
+.Tutorial_box p{
+
+  position:relative;
+  font-size: 15px;
+  top: 10px;
+  text-align: center;
+  line-height: 1.5;
+
+}
+
+mark{
+  background-color: rgb(67, 163, 201);
+}
+
+/* -------END Tutorial Box------------ */
+/* login box parameters */
+
+.login_box{
+  
+  position: absolute;
+  width: 18%;
+  height:350px;
+  border: 10px solid rgb(135,206,235);
+  background-color:rgb(135,206,235, 0.3);
+  padding: 50px;
+  left: 38%;
+  top: 320px;
+  border-radius: 25px;
+  text-align: center;
+  font-size:25px;
+  
+}
+
+#login_failure{
+
+  position: absolute;
+  color: red;
+  margin-top: 13%;
+}
+/* text inside login box */
+.login_text{
+ 
+  position: relative;
+  font-size:20px;
+  bottom: 20%;
+  font-family: 'Press Start 2P', cursive;
+
+
+}
+
+/* Giving parameters to h2 which is in .login_box */
+.login_box h2{
+
+  position:relative;
+  bottom:70px;
+  font-family: 'Press Start 2P', cursive;
+  font-size:1.5em;
+}
+/* Text box Log in page parameters */
+.login_text input{
+
+  position:relative;
+  right:10px;
+}
+
+/* Button log in parameters in .login_box */
+.login_box button {
+
+  font-size:15px; 
+  position:relative; 
+  top: 18px; 
+  border-radius: 15px;
+
+}
+
+/* login text paramters for the registartion click here section */
+
+.user_registration{
+
+  position: relative; 
+  top:10px;
+  left: 5px;
+}
+
+.user_registration p{
+
+  position:relative;
+  margin-top:10px;
+
+
+}
+/* giving the text parameters in the .login_box  */
+.login_box a{
+
+  color: blue;
+}
+
+#login_failure{
+
+  position:absolute;
+  top:60%;
+  left:5%;
+}
+
+#loginPara{
+
+  position:absolute;
+  top:65%;
+  font-size:20px;
+}
+
+/* Button for the clear data */
+.clear_data {
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color:#bddbfa;
+	border-radius:8px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-family: 'Press Start 2P', cursive;
+	font-size:12px;
+	padding:6px 14px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #528ecc;
+  position:absolute;
+  right:50%;
+
+}
+.clear_data:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+
+}
+.clear_data:active {
+	position:relative;
+
+}
+
+/* end of the button */
+
+
+/* Log-in Image background */
+.login_gif{
+
+  background-image: url('../Images/Animated_sky.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+
+/* Logo at the log in page parameters */
+
+.logo_login{
+
+  position: relative;
+  top: 20px;
+  width: 190px;
+  align-self: center;
+  left: 44.5%;
+  
+}
+
+/* text logo for the logo page parameters */
+
+.text_logopage{
+
+  position: relative;
+  bottom: 10px;
+  font-size: 3em;
+  font-family: 'Press Start 2P', cursive;
+  text-align:center;
+  
+}
+
+/* logo login button */
+
+.login_button {
+  
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:15px;
+	border:2px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-family: 'Press Start 2P', cursive;
+	font-size:10px;
+	padding:13px 33px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+  right:5px;
+}
+.login_button:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color:#476e9e;
+
+}
+.login_button:active {
+  position:relative;
+}
+
+/* REGISTER PAGE PARAMETERS */
+
+.register_box{
+
+  position: absolute;
+  width: 15em;
+  height:1220px;
+  border: 10px solid  rgb(135,206,235);
+  background-color:rgb(135,206,235, 0.3);
+  padding: 50px;
+  left: 37.8%;
+  top: 320px;
+  border-radius: 25px;
+  text-align: center;
+  font-size:20px;
+  margin-bottom: 10px;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.register_button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Press Start 2P', cursive;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+
+
+}
+.register_button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.register_button:active {
+	position:relative;
+}
+
+.register_text p{
+
+  font-size:18px; 
+  text-align:center;
+  position:relative;
+  bottom: 5px;
+}
+
+.register_text button{
+
+  font-size:15px; 
+  position:relative;
+  top: 0px;
+
+}
+
+.register_box h2{
+
+  position:relative;
+  bottom:70px;
+}
+
+/* Text box of texts and password */
+input[type=text], input[type=date],input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0px 30px 0px;
+  display: inline-block;
+  border: none;
+  background: #ffffff;
+  border-radius:20px;
+  
+}
+input[type=text]:focus, input[type=date]:focus, input[type=password]:focus {
+  background-color: rgb(207, 207, 207);
+  outline: none;
+}
+
+
+      
+.register_text{
+
+position: relative;
+bottom: 40px;
+
+
+}
+.register_text input{
+
+  position:relative;
+  right: 10px;
+}
+
+/* Parameters for the a in register_text */
+.register_text a{
+
+  color: blue;
+}
+
+.registration_button_size p{
+
+  position:relative;
+  top:15px;
+  font-size:15px;
+}
+
+/* ---------------------- Piece of LOG IN------------------ */
+/* Parameters for the p in the login page */
+.login_text p{
+
+  position: relative;
+  text-align: center;
+  font-size:10px;
+  top: 25px;
+ 
+}
+
+
+/* ----------Ranking Table--------------- */
+
+.ranking_table{
+  position:relative;
+	line-height: 18px;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+	width: 90%;
+	max-width: 2000px;
+  overflow: hidden;
+  top: 30px;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.ranking_table table {
+  position: relative;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    top: 40px;
+    
+    
+}
+
+th {
+    background-color: #326295;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+
+}
+
+td, th {
+    padding: 1em 1.5em;
+    text-align: left;
+}
+
+tbody th {
+	background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(50,98,149,.3);
+}
+
+td.rank {
+	text-transform: capitalize;
+}
+
+/* Button ranking table */
+.btn_ranking_table {
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.btn_ranking_table:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.btn_ranking_table:active {
+	position:relative;
+	top:1px;
+}
+/* Button ranking table finished */
+        
+/*----------------- Finished Ranking Table parameters ---------------*/
+
+
+/* ----------------FOOTER ------------------*/
+
+.footer{
+
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  padding: 20px;
+  background-color:rgb(7, 86, 122);
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  line-height: 1.6;
+
+
+}
+
+.footer_author{
+
+  text-align: left;
+
+
+}
+.footer_coursework{
+
+ position: absolute;
+ text-align:center;
+ bottom: 23%;
+ left:38%;
+ 
+}
+
+.footer_location{
+
+  position: absolute; 
+  text-align: right; 
+  float: right;
+  bottom: 40%;
+  left: 80%;
+  
+}   
+ /*-----------------------END of Footer--------------------- */
